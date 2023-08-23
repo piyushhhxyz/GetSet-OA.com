@@ -1,0 +1,40 @@
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(199, 0, 175);
+  background: linear-gradient(
+    180deg,
+    rgba(199, 0, 175, 1) 25%,
+    rgba(82, 4, 124, 1) 66%
+  );
+}
+.loginDiv {
+  height: 600px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.googleBtn {
+  display: flex;
+  background-color: white;
+  margin-top: 350px;
+  width: 190px;
+  height: 45px;
+  padding-left: 50px;
+  border-radius: 20px;
+}
+
+.btnItself {
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 12px;
+}
+.gitBtn {
+  margin-top: 10px;
+}

@@ -1,8 +1,16 @@
+import { Route, Routes, BrowserRouter } from "react-router-dom";
+import Landing from "./pages/Landin";
+import Auth from "./pages/Auth";
 
 function App() {
   return (
     <div className="App">
-      <h1>Yaha Apna OA App Aega bidu</h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/auth" element={<Auth />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
