@@ -1,5 +1,6 @@
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import Landing from "./pages/Landin";
+import Auth from "./pages/Auth";
 
 function App() {
   return (
@@ -7,7 +8,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Landing />} />
-          <Route path="/auth" element={<div>Auth page</div>} />
+          <Route path="/auth" element={<Auth />} />
         </Routes>
       </BrowserRouter>
     </div>
