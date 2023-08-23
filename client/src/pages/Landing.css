@@ -1,0 +1,107 @@
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+.blackDiv {
+  background-color: black;
+  height: 100vh;
+  width: 50vw;
+}
+.purpleDiv {
+  height: 100vh;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    50deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(169, 0, 255, 1)  42%
+  );
+}
+.appLogo {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.nameGr {
+  background: #dd16f2;
+  background: linear-gradient(to bottom right, #dd16f2 11%, #610bb8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.name {
+  color: white;
+  margin-left: 0px;
+}
+.inline {
+  display: flex;
+  flex-direction: row;
+  color: white;
+}
+.landingImg {
+  margin-left: 80px;
+  margin-top: 80px;
+  width: 600px;
+  height: 450px;
+}
+.registerBtn {
+  width: 200px;
+  height: 50px;
+  margin-left: 500px;
+  margin-top: 20px;
+  border-radius: 20px;
+  color: white;
+  background-color: purple;
+  border: none;
+  font-weight: 600;
+  font-size: medium;
+}
+.top {
+  margin-top: 150px;
+}
+.big {
+  font-size: 60px;
+  margin-left: 150px;
+  margin-top: -60px;
+  font-weight: 800;
+}
+.small {
+  margin-top: -15px;
+  margin-left: 10px;
+}
+.bottom {
+  margin-left: 155px;
+}
+.india {
+  margin-left: 10px;
+}
+.startBtn {
+  color: black;
+  background-color: white;
+  height: 60px;
+  width: 300px;
+  margin-left: 14vw;
+  border-radius: 15px;
+  margin-top: 50px;
+  font-size: xx-large;
+  font-weight: 600;
+  font-size: medium;
+}
+.tier {
+  background: #ae11bf;
+  background: linear-gradient(to right, #ae11bf 29%, #690cc7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.ques {
+  background: #d608bb;
+  background: linear-gradient(to right, #d608bb 14%, #70075b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
