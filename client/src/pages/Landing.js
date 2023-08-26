@@ -1,5 +1,7 @@
-import "./Landing.css";
+import { Link, useNavigate } from "react-router-dom";
+
 function Landing() {
+  let navigator = useNavigate();
   return (
     <div className="wrapper">
       <div className="blackDiv">
@@ -29,12 +31,16 @@ function Landing() {
           <p className="small bottom"> across</p>
           <p className="big india">India</p>
         </div>
-
-        <button className="startBtn">Start Solving</button>
+        <button className="startBtn" onClick={() => navigator("/auth")}>
+          Start Solving
+        </button>
       </div>
+
       <div className="purpleDiv">
-        <button className="registerBtn">REGISTER</button>
-        <img className="landingImg" src="bg-removed.jpeg" />
+        <button className="registerBtn" onClick={() => navigator("/auth")}>
+          REGISTER
+        </button>
+        <img src="bg-removed.jpeg" className="landingImg"></img>
       </div>
     </div>
   );

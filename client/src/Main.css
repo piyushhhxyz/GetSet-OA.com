@@ -1,0 +1,230 @@
+.wrapper {
+  background-color: black;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0%;
+  margin: 0%;
+}
+.blackDiv {
+  margin-top: -50px;
+  padding: 0%;
+  width: 50vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.purpleDiv {
+  background: rgb(199, 0, 175);
+  background: linear-gradient(
+    180deg,
+    rgba(199, 0, 175, 1) 25%,
+    rgba(82, 4, 124, 1) 66%
+  );
+  height: 95vh;
+  width: 45vw;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px 0px 50px 0px;
+}
+.landingImg {
+  height: 650px;
+  width: 650px;
+  margin-left: -5px;
+  margin-top: -50px;
+}
+.registerBtn {
+  padding: 25px 1px;
+  position: relative;
+  height: 10px;
+  width: 200px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 450px;
+  margin-top: -20px;
+  color: white;
+  background-color: black;
+  font-weight: 700;
+  font-size: medium;
+}
+.registerBtn:hover {
+  cursor: pointer;
+}
+
+.appLogo {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-left: -20px;
+  margin-right: 10px;
+}
+.nameGr {
+  background: #dd16f2;
+  background: linear-gradient(to bottom right, #dd16f2 11%, #610bb8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 2px;
+}
+.name {
+  color: white;
+  margin-left: 0px;
+}
+.inline {
+  display: flex;
+  flex-direction: row;
+  color: white;
+}
+.top {
+  margin-top: 150px;
+  position: relative;
+}
+.big {
+  font-size: 60px;
+  margin-left: 150px;
+  margin-top: -60px;
+  font-weight: 800;
+  position: relative;
+}
+.small {
+  margin-top: -30px;
+  margin-left: 10px;
+  font-size: 30px;
+  position: relative;
+}
+.bottom {
+  margin-left: 155px;
+  position: relative;
+}
+.india {
+  margin-left: 10px;
+}
+.startBtn {
+  height: 60px;
+  width: 250px;
+  margin-left: 14vw;
+  border-radius: 15px;
+  margin-top: 50px;
+
+  border: none;
+  font-weight: 600;
+  font-size: larger;
+  background-image: linear-gradient(
+    to right,
+    #da22ff 0%,
+    #9733ee 51%,
+    #da22ff 100%
+  );
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+}
+
+.startBtn:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.tier {
+  background: #ae11bf;
+  background: linear-gradient(to right, #ae11bf 29%, #690cc7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.ques {
+  background: #d608bb;
+  background: linear-gradient(to right, #d608bb 14%, #70075b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.LINK {
+  background-color: aqua;
+}
+.loginWrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -100px;
+}
+.container {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.loginImg {
+  height: 800px;
+  width: 800px;
+}
+.btnDiv {
+  display: flex;
+}
+.gitBtn {
+  margin-left: 50px;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  font-weight: 750;
+  font-size: large;
+  color: white;
+  background-color: black;
+}
+.googleBtn {
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  font-weight: 750;
+  font-size: large;
+}
+.homeWrapper {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(152, 3, 249, 1) 81%
+  );
+  height: 100vh;
+}
+.appLogoHome {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-left: 0px;
+  margin-right: 10px;
+}
+.loginTop {
+  background: rgb(44, 1, 41);
+  background: linear-gradient(
+    180deg,
+    rgba(44, 1, 41, 1) 16%,
+    rgba(243, 0, 255, 1) 98%
+  );
+  height: 100vh;
+}
+.appLogoLogin {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 10px;
+}
