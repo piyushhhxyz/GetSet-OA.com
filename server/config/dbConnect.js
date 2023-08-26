@@ -1,3 +1,4 @@
+require('dotenv').config();
 const mongoose = require("mongoose")
 
 module.exports.dbConnect = () => {
@@ -10,6 +11,5 @@ module.exports.dbConnect = () => {
             console.log(`DB Connection failed`)
             console.error(e.message)
             process.exit(1)
-            
         })
 }
