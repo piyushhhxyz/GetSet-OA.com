@@ -4,9 +4,15 @@ function Landing() {
   let navigator = useNavigate();
 
   const [text] = useTypewriter({
-    words: ["Google", "Meta", "Netflix", "Sprinklr"],
+    words: [
+      "Google OA",
+      "Atlastion OA",
+      "MicroSoft OA",
+      "Sprinklr OA",
+      "Morgan Stanley OA",
+    ],
     loop: {},
-    typeSpeed: 300,
+    typeSpeed: 100,
     delaySpeed: 80,
   });
 
@@ -24,8 +30,7 @@ function Landing() {
 
         <div className="typeWriter">
           <h2 className="typeWriterH2">
-            OA ques from
-            <span> {text}</span>
+            <span className="getText">Get</span> <span>{text}</span>
             <span className="typeWriterCursor">
               <Cursor />
             </span>

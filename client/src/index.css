@@ -111,7 +111,7 @@ code {
 }
 .big {
   font-size: 60px;
-  margin-left: 150px;
+  margin-left: 100px;
   margin-top: -60px;
   font-weight: 800;
   position: relative;
@@ -123,7 +123,7 @@ code {
   position: relative;
 }
 .bottom {
-  margin-left: 155px;
+  margin-left: 105px;
   position: relative;
 }
 .india {
@@ -275,16 +275,22 @@ code {
 }
 .typeWriter {
   margin-top: -450px;
-  margin-left: 150px;
-  width: 450px;
+  margin-left: 100px;
+  width: 1000px;
   font-size: x-large;
   position: fixed;
   display: flex;
   flex-direction: row;
 }
 .typeWriterH2 {
-  color: white;
+  background: #ae11bf;
+  background: linear-gradient(to right, #ae11bf 29%, #690cc7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 60px;
+  font-weight: 800;
 }
-.typeWriterCursor {
+.getText {
   color: white;
+  font-size: 30px;
 }
