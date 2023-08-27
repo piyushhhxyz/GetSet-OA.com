@@ -4,15 +4,14 @@ const cors = require("cors");
 const passportSetup = require("./passport");
 const passport = require("passport");
 
-const {dbConnect} = require("./config/dbConnect");
-const {users} = require("./models/user");
-const {questions} = require("./models/questions");
+const { dbConnect } = require("./config/dbConnect");
+const { users } = require("./models/user");
+const { questions } = require("./models/questions");
 
 const authRoute = require("./routes/auth");
 const app = express();
 
-
-dbConnect() ;
+dbConnect();
 app.use(
   cookieSession({ name: "session", keys: ["lama"], maxAge: 24 * 60 * 60 * 100 })
 );
