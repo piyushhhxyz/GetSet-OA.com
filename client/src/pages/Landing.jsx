@@ -1,7 +1,15 @@
-import { Link, useNavigate } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 function Landing() {
   let navigator = useNavigate();
+
+  const [text] = useTypewriter({
+    words: ["Google", "Meta", "Netflix", "Sprinklr"],
+    loop: {},
+    typeSpeed: 300,
+    delaySpeed: 80,
+  });
+
   return (
     <div className="wrapper">
       <div className="blackDiv">
@@ -12,6 +20,16 @@ function Landing() {
           />
           <h1 className="name">GetSet</h1>
           <h1 className="nameGr">OA</h1>
+        </div>
+
+        <div className="typeWriter">
+          <h2 className="typeWriterH2">
+            OA ques from
+            <span> {text}</span>
+            <span className="typeWriterCursor">
+              <Cursor />
+            </span>
+          </h2>
         </div>
 
         <div className="inline top">
