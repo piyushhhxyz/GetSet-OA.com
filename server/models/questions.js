@@ -12,7 +12,8 @@ const QuestionsSchema = new mongoose.Schema({
         },
         uploadedBy: {
             type: mongoose.Schema.Types.ObjectId, 
-            ref:"user"
+            ref:"users",
+            required: true
         },
 	},{ timestamps: true });
 

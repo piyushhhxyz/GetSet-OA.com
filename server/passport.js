@@ -21,10 +21,14 @@ passport.use(
       clientSecret: GOOGLE_CLIENT_SECRET,
       callbackURL: "/auth/google/callback",
     },
-    function (accessToken, refreshToken, profile, done) {
+    async function (accessToken, refreshToken, profile, done) {
+      // console.log(profile)
+      const existingUser = users.findOne({ username:profile.displayName })
+
       const newUser = new users({ 
         username: profile.displayName, 
-        profilePhotoURL: profile.photos[0].value 
+        profilePhotoURL: profile.photos[0].value,
+        provider: profile.provider
       });
       newUser.save();
       done(null, profile);
@@ -42,7 +46,8 @@ passport.use(
     function (accessToken, refreshToken, profile, done) {
       const newUser = new users({ 
         username: profile.displayName, 
-        profilePhotoURL: profile.photos[0].value 
+        profilePhotoURL: profile.photos[0].value,
+        provider: profile.provider
       });
       newUser.save();
       done(null, profile);

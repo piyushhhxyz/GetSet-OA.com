@@ -34,6 +34,9 @@ code {
   justify-content: center;
 }
 .purpleDiv {
+  /* box-shadow:1px 0px 50px 0px rgb(168, 2, 190) ; */
+  /* box-shadow:1px 0px 50px 0px rgb(199, 0, 175) ; */
+
   background: rgb(199, 0, 175);
   background: linear-gradient(
     180deg,
@@ -49,6 +52,7 @@ code {
   align-items: center;
   border-radius: 50px 0px 50px 0px;
 }
+
 .landingImg {
   height: 650px;
   width: 650px;
@@ -275,6 +279,7 @@ code {
 }
 .typeWriter {
   margin-top: -450px;
+  margin-bottom: -50px;
   margin-left: 100px;
   width: 1000px;
   font-size: x-large;
@@ -282,15 +287,17 @@ code {
   display: flex;
   flex-direction: row;
 }
+.getText {
+  color: white;
+  font-size: 30px;
+  font-weight: 400;
+}
 .typeWriterH2 {
-  background: #ae11bf;
+  /* background: #ae11bf; */
   background: linear-gradient(to right, #ae11bf 29%, #690cc7 100%);
+  color: white;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 60px;
   font-weight: 800;
-}
-.getText {
-  color: white;
-  font-size: 30px;
 }

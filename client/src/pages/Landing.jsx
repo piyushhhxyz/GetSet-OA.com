@@ -5,15 +5,15 @@ function Landing() {
 
   const [text] = useTypewriter({
     words: [
-      "Google OA",
-      "Atlastion OA",
-      "MicroSoft OA",
-      "Sprinklr OA",
-      "Morgan Stanley OA",
+      "Google Questions",
+      "Microsoft Questions",
+      "Atlassian Questions",
+      "Sprinklr Questions",
+      "All OA Questions...", 
     ],
     loop: {},
-    typeSpeed: 100,
-    delaySpeed: 80,
+    typeSpeed: 10,
+    delaySpeed: 980,
   });
 
   return (
@@ -27,10 +27,10 @@ function Landing() {
           <h1 className="name">GetSet</h1>
           <h1 className="nameGr">OA</h1>
         </div>
-
+          
         <div className="typeWriter">
-          <h2 className="typeWriterH2">
-            <span className="getText">Get</span> <span>{text}</span>
+          <h2 >
+            <span className="getText">Get</span> <span className="typeWriterH2">{text}</span>
             <span className="typeWriterCursor">
               <Cursor />
             </span>
