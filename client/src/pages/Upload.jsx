@@ -4,9 +4,10 @@ export default function Upload() {
     const [formData, setFormData] = React.useState({
         companyName: '',
         companyPhoto: '',
+        driveLink: '',
         collegeName: '',
         date: '',
-        internOrFullTime: 'Intern',
+        internOrFullTime: '',
         uploadedBy: 'req.user.id', 
     });
     const [_, setFileInputState] = React.useState('');
@@ -35,13 +36,17 @@ export default function Upload() {
         };
     };
 
-    const uploadImage = async (base64EncodedImage) => {
-        console.log(`Uploading images to cloudinary...`)
+    const uploadData = async (base64EncodedImage) => {
         try {
             await fetch('http://localhost:4000/api/v1/upload', {
                 method: 'POST',
-                body: JSON.stringify({ data: base64EncodedImage }),
-                headers: { 'Content-Type': 'application/json' },
+                headers: { 
+                    'Content-Type': 'application/json' 
+                },
+                body: JSON.stringify({
+                    ...formData,
+                    base64EncodedImage
+                })
             });
         } catch (err) {
             console.error(err);
@@ -56,7 +61,7 @@ export default function Upload() {
         const reader = new FileReader();
         reader.readAsDataURL(selectedFile);
         reader.onloadend = () => {
-            uploadImage(reader.result);
+            uploadData(reader.result);
             setFileInputState('');
             setPreviewSource('');
             
@@ -90,6 +95,15 @@ export default function Upload() {
                         name="companyPhoto"
                         onChange={handleFileInputChange}
                         className="form-input"
+                    /><br/><br/>
+                    <label htmlFor="driveLink">Paste PDF Drive Link Please</label>
+                    <input
+                        type="text"
+                        name="driveLink"
+                        value={formData.driveLink}
+                        onChange={handleInputChange}
+                        placeholder="drive.google.com/file"
+                        required
                     /><br/><br/>
                     <label htmlFor="collegeName">College Name</label>
                     <input

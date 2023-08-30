@@ -4,20 +4,23 @@ const { cloudinary } = require("../config/cloudinary");
 
 exports.handleUpload = async(req,res) => {
     try {
-        // const { companyName,collegeName,date,intern_or_FullTime } = req.body
-        const fileStr = req.body.data;
+        const { 
+            companyName,
+            collegeName,
+            date,driveLink,
+            internOrFullTime,
+            base64EncodedImage 
+        } = req.body
+        // console.log(req.body)
+        const uploadResponse = await cloudinary.uploader.upload(base64EncodedImage, { folder: process.env.FOLDER_NAME });
   
-        const uploadResponse = await cloudinary.uploader.upload(fileStr, { folder: process.env.FOLDER_NAME });
-        // const uploadResponse = await uploadImageToCloudinary(fileStr, folderName);
-  
-        console.log(`url: ${uploadResponse.url}`);
         const questionsUpload = new questions({
-            companyName: "ewew",
+            companyName: companyName,
 		    companyPhoto: uploadResponse.url,
-            collegeName: "ewew",
-            date: "ewew",
-            intern_or_FullTime: "Intern",
-            // uploadedBy: req.userID,
+            driveLink: driveLink,
+            collegeName: collegeName,
+            date: date,
+            intern_or_FullTime: internOrFullTime,
         })
         questionsUpload.save();
 
