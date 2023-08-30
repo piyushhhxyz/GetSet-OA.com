@@ -6,10 +6,12 @@ const passport = require("passport");
 
 const fileUpload = require("express-fileupload");
 const { dbConnect } = require("./config/dbConnect");
-// const { cloudinary } = require("./config/cloudinary");
+
 
 const authRoute = require("./routes/auth");
 const uploadRoute = require("./routes/Upload")
+const getDataRoutes = require('./routes/getData');
+
 const app = express();
 
 dbConnect();
@@ -39,9 +41,9 @@ app.use(
 );
 
 
-
 app.use("/auth", authRoute);
 app.use('/api/v1', uploadRoute)
+app.use('/api/v1/getData', getDataRoutes);
 
 app.listen(4000, () => {
   console.log("Server is running at 4000!");

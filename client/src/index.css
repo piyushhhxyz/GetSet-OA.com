@@ -400,3 +400,34 @@ code {
 }
 
 
+/* Home.css */
+
+.companiesBox {
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.companyList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.companyItem {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+/* Home.css */
+
+.companyBox {
+  display: inline-block;
+  padding: 20px;
+  margin: 30px;
+  border: 1px solid #ccc;
+  background-color: #f7f7f7;
+  font-weight: 800;
+  text-transform: uppercase;
+}
