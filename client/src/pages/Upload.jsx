@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-export default function UploadForm() {
-    const [formData, setFormData] = useState({
+export default function Upload() {
+    const [formData, setFormData] = React.useState({
         companyName: '',
         companyPhoto: '',
         collegeName: '',
@@ -10,8 +10,8 @@ export default function UploadForm() {
         uploadedBy: 'req.user.id', 
     });
     const [_, setFileInputState] = React.useState('');
-    const [previewSource, setPreviewSource] = useState('');
-    const [selectedFile, setSelectedFile] = useState('');
+    const [previewSource, setPreviewSource] = React.useState('');
+    const [selectedFile, setSelectedFile] = React.useState('');
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -36,21 +36,21 @@ export default function UploadForm() {
     };
 
     const uploadImage = async (base64EncodedImage) => {
-        // try {
-        //     await fetch('http://localhost:4000/api/upload', {
-        //         method: 'POST',
-        //         body: JSON.stringify({ data: base64EncodedImage }),
-        //         headers: { 'Content-Type': 'application/json' },
-        //     });
-        // } catch (err) {
-        //     console.error(err);
-        // }
         console.log(`Uploading images to cloudinary...`)
+        try {
+            await fetch('http://localhost:4000/api/v1/upload', {
+                method: 'POST',
+                body: JSON.stringify({ data: base64EncodedImage }),
+                headers: { 'Content-Type': 'application/json' },
+            });
+        } catch (err) {
+            console.error(err);
+        }
     };
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        
+
         if (!selectedFile) return;
         
         const reader = new FileReader();
@@ -60,7 +60,6 @@ export default function UploadForm() {
             setFileInputState('');
             setPreviewSource('');
             
-            // Print formData to the console
             console.log(formData);
         };
         reader.onerror = () => {

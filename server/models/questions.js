@@ -10,11 +10,11 @@ const QuestionsSchema = new mongoose.Schema({
             enum: ["Intern", "FullTime"], 
             required: true
         },
-        uploadedBy: {
-            type: mongoose.Schema.Types.ObjectId, 
-            ref:"users",
-            required: true
-        },
+        // uploadedBy: {
+        //     type: mongoose.Schema.Types.ObjectId, 
+        //     ref:"users",
+        //     required: true
+        // },
 	},{ timestamps: true });
 
 module.exports = mongoose.model("questions", QuestionsSchema);
