@@ -5,19 +5,28 @@ const passportSetup = require("./passport");
 const passport = require("passport");
 
 const { dbConnect } = require("./config/dbConnect");
-const { users } = require("./models/user");
-const { questions } = require("./models/questions");
+const { cloudinaryConnect } = require("./config/cloudinary");
+const fileUpload = require("express-fileupload");
 
 const authRoute = require("./routes/auth");
 const app = express();
 
 dbConnect();
+app.use(express.json());
 app.use(
   cookieSession({ name: "session", keys: ["lama"], maxAge: 24 * 60 * 60 * 100 })
 );
 
 app.use(passport.initialize());
 app.use(passport.session());
+
+app.use(
+	fileUpload({
+		useTempFiles:true,
+		tempFileDir:"/tmp",
+	})
+)
+cloudinaryConnect();
 
 app.use(
   cors({

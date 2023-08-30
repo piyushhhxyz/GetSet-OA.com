@@ -7,6 +7,7 @@ import {
 import Landing from "./pages/Landing";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
+import QsUploader from "./pages/Upload";
 
 
 export default function App() {
@@ -42,6 +43,7 @@ export default function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/auth" element={<Login />} />
         <Route path="/home" element={<Home user={user}/>} />
+        <Route path="/uploader" element={<QsUploader />} />
       </Routes>
     </BrowserRouter>
   )
