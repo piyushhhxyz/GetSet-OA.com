@@ -42,19 +42,26 @@ export default function Home({ user }) {
             <li className="listItem">{user.displayName}</li>
           </ul>
         ) : (
-          <Link className="link" to="login">
+          <Link className="listItem" to="/auth">
             Login
           </Link>
         )}
       </div>
 
       <div className="companiesContainer">
-        {uniqueCompanies.map((companyName, index) => (
-          <div key={index} className="companyBox">
-            {companyName.toUpperCase()}
-          </div>
-        ))}
-      </div>
+                {uniqueCompanies.map((company, index) => (
+                    <Link key={index} to={`/Home/${company._id}`}>
+                        <div className="companyBox">
+                            <img
+                                src={company.companyLogo}
+                                alt={`${company._id} Logo`}
+                                className="companyLogo"
+                            />
+                            <div className="companyName">{company._id.toUpperCase()}</div>
+                        </div>
+                    </Link>
+                ))}
+            </div>
     </div>
   );
 }

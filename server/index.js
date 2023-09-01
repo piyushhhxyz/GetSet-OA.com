@@ -40,7 +40,6 @@ app.use(
   })
 );
 
-
 app.use("/auth", authRoute);
 app.use('/api/v1', uploadRoute)
 app.use('/api/v1/getData', getDataRoutes);

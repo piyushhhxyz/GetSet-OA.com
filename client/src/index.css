@@ -218,7 +218,6 @@ code {
   font-size: large;
 }
 .homeWrapper {
-  background: rgb(0, 0, 0);
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 1) 0%,
@@ -301,6 +300,8 @@ code {
   font-size: 60px;
   font-weight: 800;
 }
+
+
 
 
 
@@ -422,12 +423,93 @@ code {
 
 /* Home.css */
 
+.companiesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 50px;
+  max-width: 1200px; 
+  margin: 0 auto;
+}
+
 .companyBox {
-  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 20px;
-  margin: 30px;
-  border: 1px solid #ccc;
-  background-color: #f7f7f7;
-  font-weight: 800;
-  text-transform: uppercase;
+  width: fit-content; 
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.companyLogo {
+  width: fit-content;
+  max-height: 200px;
+  margin-bottom: 10px;
+}
+
+.companyName {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.companyBox:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
+}
+
+/* CompanyDetails.css */
+
+.company-details-container {
+  padding: 20px;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(152, 3, 249, 1) 81%
+  );
+  color: #fff;
+  min-height: 100vh;
+}
+
+.company-name-heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.details-boxes {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.details-box {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  margin: 10px;
+  width: calc(33.33% - 20px);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.details-box:hover {
+  background-color: rgba(255, 255, 255, 0.2); 
+  transform: scale(1.0); 
+}
+
+.college-name {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #eee;
+}
+
+.info {
+  margin-bottom: 5px;
+  color: #ccc;
+}
+
+.details-box.active {
+  background-color: rgba(255, 255, 255, 0.3);
 }

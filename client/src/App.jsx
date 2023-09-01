@@ -8,10 +8,12 @@ import Landing from "./pages/Landing";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Upload from "./pages/Upload";
+import CompanyPage from "./pages/CompanyPage";
 
 
 export default function App() {
   const [user, setUser] = React.useState(null);
+
   React.useEffect(() => {
     const getUser = () => {
       fetch("http://localhost:4000/auth/login/success", {
@@ -27,12 +29,8 @@ export default function App() {
           if (response.status === 200) return response.json();
           throw new Error("authentication has been failed!");
         })
-        .then((resObject) => {
-          setUser(resObject.user);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+        .then((resObject) => setUser(resObject.user))
+        .catch((err) => console.log(err));
     };
     getUser();
   }, []);
@@ -44,6 +42,7 @@ export default function App() {
         <Route path="/auth" element={<Login />} />
         <Route path="/home" element={<Home user={user}/>} />
         <Route path="/upload" element={<Upload />} />
+        <Route path="/home/:companyName" element={<CompanyPage />} />
       </Routes>
     </BrowserRouter>
   )

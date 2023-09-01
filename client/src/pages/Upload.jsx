@@ -8,7 +8,6 @@ export default function Upload() {
         collegeName: '',
         date: '',
         internOrFullTime: '',
-        uploadedBy: 'req.user.id', 
     });
     const [_, setFileInputState] = React.useState('');
     const [previewSource, setPreviewSource] = React.useState('');

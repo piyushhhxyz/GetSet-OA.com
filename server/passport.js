@@ -5,11 +5,11 @@ const passport = require("passport");
 
 const users = require("./models/user")
 
-const GOOGLE_CLIENT_ID = "1035910352763-kicglhp6h6hof4jsdg49civfvr45qekt.apps.googleusercontent.com";
-const GOOGLE_CLIENT_SECRET = "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";
+const GOOGLE_CLIENT_ID = "1035910352763-ilvgp1a8e5m7l2tinp61vbnfs0k1h1mr.apps.googleusercontent.com";
+const GOOGLE_CLIENT_SECRET = "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";
 
-GITHUB_CLIENT_ID = "058c56d1d3a93b08ae58";
-GITHUB_CLIENT_SECRET = "7bbe44e1319488afcf6489bae73f85bd5d56855a";
+const GITHUB_CLIENT_ID = "058c56d1d3a93b08ae58";
+const GITHUB_CLIENT_SECRET = "7bbe44e1319488afcf6489bae73f85bd5d56855a";
 
 FACEBOOK_APP_ID = "your id";
 FACEBOOK_APP_SECRET = "your id";
