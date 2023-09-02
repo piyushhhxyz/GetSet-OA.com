@@ -1,15 +1,10 @@
 import React from "react";
-import { 
-  Route,
-  Routes,
-  BrowserRouter,
-} from "react-router-dom";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 import Landing from "./pages/Landing";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Upload from "./pages/Upload";
 import CompanyPage from "./pages/CompanyPage";
-
 
 export default function App() {
   const [user, setUser] = React.useState(null);
@@ -40,11 +35,10 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/auth" element={<Login />} />
-        <Route path="/home" element={<Home user={user}/>} />
+        <Route path="/home" element={<Home user={user} />} />
         <Route path="/upload" element={<Upload />} />
         <Route path="/home/:companyName" element={<CompanyPage />} />
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
-

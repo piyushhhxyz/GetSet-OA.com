@@ -202,20 +202,41 @@ code {
 }
 .gitBtn {
   margin-left: 50px;
-  width: 200px;
+  width: 220px;
   height: 50px;
   border-radius: 10px;
   font-weight: 750;
   font-size: large;
   color: white;
   background-color: black;
+  display: flex;
+}
+.github-icon {
+  height: 35px;
+  width: 35px;
+  margin-left: 5px;
+  margin-top: 7px;
+  border-radius: 50%;
+}
+.git-btn-text {
+  margin-left: 5px;
+  margin-top: 15px;
 }
 .googleBtn {
-  width: 200px;
+  width: 220px;
   height: 50px;
   border-radius: 10px;
   font-weight: 750;
   font-size: large;
+  display: flex;
+}
+.google-btn-text {
+  margin-top: 13px;
+  margin-left: 10px;
+}
+.google-icon {
+  margin-top: 10px;
+  margin-left: 10px;
 }
 .homeWrapper {
   background: linear-gradient(
@@ -224,6 +245,7 @@ code {
     rgba(152, 3, 249, 1) 81%
   );
   height: 100vh;
+  overflow: scroll;
 }
 .appLogoHome {
   height: 70px;
@@ -301,11 +323,7 @@ code {
   font-weight: 800;
 }
 
-
-
-
-
-  /* FORM CSS */
+/* FORM CSS */
 
 .upload-form {
   max-width: 400px;
@@ -400,7 +418,6 @@ code {
   max-height: 600px;
 }
 
-
 /* Home.css */
 
 .companiesBox {
@@ -429,7 +446,7 @@ code {
   justify-content: center;
   gap: 40px;
   padding: 50px;
-  max-width: 1200px; 
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -437,7 +454,7 @@ code {
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 20px;
-  width: fit-content; 
+  width: fit-content;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
   text-align: center;
@@ -466,9 +483,9 @@ code {
 .company-details-container {
   padding: 20px;
   background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(152, 3, 249, 1) 81%
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(152, 3, 249, 1) 81%
   );
   color: #fff;
   min-height: 100vh;
@@ -495,8 +512,8 @@ code {
 }
 
 .details-box:hover {
-  background-color: rgba(255, 255, 255, 0.2); 
-  transform: scale(1.0); 
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1);
 }
 
 .college-name {
