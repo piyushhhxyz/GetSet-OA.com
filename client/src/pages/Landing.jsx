@@ -1,5 +1,7 @@
-import { useNavigate } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
+import { Player } from "@lottiefiles/react-lottie-player";
+
 function Landing() {
   let navigator = useNavigate();
 
@@ -9,7 +11,7 @@ function Landing() {
       "Microsoft Questions",
       "Atlassian Questions",
       "Sprinklr Questions",
-      "All OA Questions...", 
+      "All OA Questions...",
     ],
     loop: {},
     typeSpeed: 10,
@@ -24,13 +26,14 @@ function Landing() {
             className="appLogo"
             src="wepik-gradient-developers-pink-coding-logo-20230823145648gBI8.png"
           />
-          <h1 className="name">GetSet</h1>
-          <h1 className="nameGr">OA</h1>
+          <h1 className="name">GetSet </h1>
+          <h1 className="nameGr">OA.com</h1>
         </div>
-          
+
         <div className="typeWriter">
-          <h2 >
-            <span className="getText">Get</span> <span className="typeWriterH2">{text}</span>
+          <h2>
+            <span className="getText">Get</span>{" "}
+            <span className="typeWriterH2">{text}</span>
             <span className="typeWriterCursor">
               <Cursor />
             </span>
@@ -63,8 +66,16 @@ function Landing() {
         <button className="registerBtn" onClick={() => navigator("/auth")}>
           REGISTER
         </button>
-        <img src="bg-removed.jpeg" className="landingImg"></img>
+        {/* <img src="bg-removed.jpeg" className="landingImg"></img> */}
+        <Player
+          src="https://lottie.host/cf34bdd3-6a15-42c1-92cb-84e9e15f06c9/dlSKAoiHbM.json"
+          className="player"
+          loop
+          autoplay
+          style={{ height: "600px", width: "600px" }}
+        />
       </div>
+      <Outlet></Outlet>
     </div>
   );
 }

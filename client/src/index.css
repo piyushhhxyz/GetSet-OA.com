@@ -92,7 +92,9 @@ code {
   background: linear-gradient(to bottom right, #dd16f2 11%, #610bb8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-left: 2px;
+  margin-left: 10px;
+  font-weight: 800;
+  font-size: 33px;
 }
 .name {
   color: white;
@@ -185,13 +187,14 @@ code {
   align-items: center;
   margin-top: -100px;
 }
-.container {
+.Lcontainer {
   width: 500px;
   height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 80px;
 }
 .loginImg {
   height: 800px;
@@ -199,23 +202,47 @@ code {
 }
 .btnDiv {
   display: flex;
+  margin-top: 20px;
 }
 .gitBtn {
-  margin-left: 50px;
-  width: 200px;
+  margin-left: 10px;
+  width: 260px;
   height: 50px;
   border-radius: 10px;
-  font-weight: 750;
   font-size: large;
   color: white;
   background-color: black;
+  display: flex;
+  justify-content: center;
+}
+.github-icon {
+  height: 35px;
+  width: 35px;
+  margin-left: 5px;
+  margin-top: 5px;
+  border-radius: 50%;
+}
+.git-btn-text {
+  margin-left: 7px;
+  margin-top: 14px;
+  font-weight: 700;
 }
 .googleBtn {
-  width: 200px;
+  width: 260px;
   height: 50px;
   border-radius: 10px;
-  font-weight: 750;
   font-size: large;
+  display: flex;
+  justify-content: center;
+}
+.google-btn-text {
+  margin-top: 13px;
+  margin-left: 10px;
+  font-weight: 700;
+}
+.google-icon {
+  margin-top: 10px;
+  margin-left: 10px;
 }
 .homeWrapper {
   background: linear-gradient(
@@ -224,6 +251,7 @@ code {
     rgba(152, 3, 249, 1) 81%
   );
   height: 100vh;
+  overflow: scroll;
 }
 .appLogoHome {
   height: 70px;
@@ -301,11 +329,7 @@ code {
   font-weight: 800;
 }
 
-
-
-
-
-  /* FORM CSS */
+/* FORM CSS */
 
 .upload-form {
   max-width: 400px;
@@ -376,15 +400,18 @@ code {
 /* UploadForm.css */
 .upload-form-container {
   display: flex;
-  align-items: flex-start;
+  background-color: black;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-
 .upload-form {
   flex: 1;
   padding: 20px;
   box-sizing: border-box;
+  margin-left: 550px;
 }
-
 .upload-preview {
   flex: 1;
   padding: 20px;
@@ -399,7 +426,6 @@ code {
   max-width: 500px;
   max-height: 600px;
 }
-
 
 /* Home.css */
 
@@ -429,7 +455,7 @@ code {
   justify-content: center;
   gap: 40px;
   padding: 50px;
-  max-width: 1200px; 
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -437,7 +463,7 @@ code {
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 20px;
-  width: fit-content; 
+  width: fit-content;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
   text-align: center;
@@ -466,9 +492,9 @@ code {
 .company-details-container {
   padding: 20px;
   background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(152, 3, 249, 1) 81%
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(152, 3, 249, 1) 81%
   );
   color: #fff;
   min-height: 100vh;
@@ -495,8 +521,8 @@ code {
 }
 
 .details-box:hover {
-  background-color: rgba(255, 255, 255, 0.2); 
-  transform: scale(1.0); 
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1);
 }
 
 .college-name {
