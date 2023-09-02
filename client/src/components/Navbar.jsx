@@ -10,7 +10,7 @@ export default function Navbar({ user }) {
     <div className="inline">
       <img className="appLogoHome" src="assets\appLogo.png" alt="App Logo" />
       <h1 className="name">GetSet</h1>
-      <h1 className="nameGr">OA</h1>
+      <h1 className="nameGr">OA.com</h1>
       {user ? (
         <ul className="list">
           <li className="listItem">

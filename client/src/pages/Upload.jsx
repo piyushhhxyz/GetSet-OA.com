@@ -1,6 +1,7 @@
 import React from "react";
+import Navbar from "../components/Navbar";
 
-export default function Upload() {
+export default function Upload({ user }) {
   const [formData, setFormData] = React.useState({
     companyName: "",
     companyPhoto: "",
@@ -47,6 +48,7 @@ export default function Upload() {
           base64EncodedImage,
         }),
       });
+      alert("Data submited");
     } catch (err) {
       console.error(err);
     }
@@ -54,7 +56,6 @@ export default function Upload() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    alert("Data submited");
     if (!selectedFile) return;
 
     const reader = new FileReader();
@@ -73,6 +74,7 @@ export default function Upload() {
 
   return (
     <div className="upload-form-container">
+      {/* <Navbar user={user} /> */}
       <form onSubmit={handleSubmit} className="upload-form">
         <fieldset>
           <legend>

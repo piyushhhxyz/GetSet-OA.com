@@ -92,7 +92,9 @@ code {
   background: linear-gradient(to bottom right, #dd16f2 11%, #610bb8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-left: 2px;
+  margin-left: 10px;
+  font-weight: 800;
+  font-size: 33px;
 }
 .name {
   color: white;
@@ -398,15 +400,18 @@ code {
 /* UploadForm.css */
 .upload-form-container {
   display: flex;
-  align-items: flex-start;
+  background-color: black;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-
 .upload-form {
   flex: 1;
   padding: 20px;
   box-sizing: border-box;
+  margin-left: 550px;
 }
-
 .upload-preview {
   flex: 1;
   padding: 20px;

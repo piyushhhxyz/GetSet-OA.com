@@ -26,8 +26,8 @@ function Landing() {
             className="appLogo"
             src="wepik-gradient-developers-pink-coding-logo-20230823145648gBI8.png"
           />
-          <h1 className="name">GetSet</h1>
-          <h1 className="nameGr">OA</h1>
+          <h1 className="name">GetSet </h1>
+          <h1 className="nameGr">OA.com</h1>
         </div>
 
         <div className="typeWriter">
