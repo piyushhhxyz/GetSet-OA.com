@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Upload from "./pages/Upload";
 import CompanyPage from "./pages/CompanyPage";
 import Loader from "./components/Loader";
+import Test from "./components/test";
 
 export default function App() {
   const [user, setUser] = React.useState(null);
@@ -34,7 +35,6 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/test" element={<Loader />} />
         <Route path="/" element={<Landing />} />
         <Route path="/auth" element={<Login />} />
         <Route path="/home" element={<Home user={user} />} />

@@ -185,13 +185,14 @@ code {
   align-items: center;
   margin-top: -100px;
 }
-.container {
+.Lcontainer {
   width: 500px;
   height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 80px;
 }
 .loginImg {
   height: 800px;
@@ -199,17 +200,18 @@ code {
 }
 .btnDiv {
   display: flex;
+  margin-top: 20px;
 }
 .gitBtn {
-  margin-left: 50px;
-  width: 220px;
+  margin-left: 10px;
+  width: 260px;
   height: 50px;
   border-radius: 10px;
-  font-weight: 750;
   font-size: large;
   color: white;
   background-color: black;
   display: flex;
+  justify-content: center;
 }
 .github-icon {
   height: 35px;
@@ -221,18 +223,20 @@ code {
 .git-btn-text {
   margin-left: 7px;
   margin-top: 14px;
+  font-weight: 700;
 }
 .googleBtn {
-  width: 220px;
+  width: 260px;
   height: 50px;
   border-radius: 10px;
-  font-weight: 750;
   font-size: large;
   display: flex;
+  justify-content: center;
 }
 .google-btn-text {
   margin-top: 13px;
   margin-left: 10px;
+  font-weight: 700;
 }
 .google-icon {
   margin-top: 10px;

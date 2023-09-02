@@ -1,5 +1,7 @@
 import { Outlet, useNavigate } from "react-router-dom";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
+import { Player } from "@lottiefiles/react-lottie-player";
+
 function Landing() {
   let navigator = useNavigate();
 
@@ -64,7 +66,14 @@ function Landing() {
         <button className="registerBtn" onClick={() => navigator("/auth")}>
           REGISTER
         </button>
-        <img src="bg-removed.jpeg" className="landingImg"></img>
+        {/* <img src="bg-removed.jpeg" className="landingImg"></img> */}
+        <Player
+          src="https://lottie.host/cf34bdd3-6a15-42c1-92cb-84e9e15f06c9/dlSKAoiHbM.json"
+          className="player"
+          loop
+          autoplay
+          style={{ height: "600px", width: "600px" }}
+        />
       </div>
       <Outlet></Outlet>
     </div>

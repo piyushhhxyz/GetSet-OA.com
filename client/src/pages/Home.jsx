@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar";
 import Loader from "../components/Loader";
 
 export default function Home({ user }) {
-  const [isLoading, setLoading] = React.useState(false);
+  const [isLoading, setLoading] = React.useState(true);
   const [uniqueCompanies, setUniqueCompanies] = React.useState([]);
 
   let cards = uniqueCompanies.map((company, index) => {
@@ -29,7 +29,7 @@ export default function Home({ user }) {
 
   const getUniqueCompanies = async () => {
     setTimeout(() => {
-      setLoading(true);
+      setLoading(false);
     }, 800);
     try {
       const response = await axios.get(
@@ -46,11 +46,12 @@ export default function Home({ user }) {
       {isLoading ? (
         <div>
           <Navbar user={user}></Navbar>
-          <div className="companiesContainer">{cards}</div>
+          <Loader />
         </div>
       ) : (
         <div>
-          <Loader />
+          <Navbar user={user}></Navbar>
+          <div className="companiesContainer">{cards}</div>
         </div>
       )}
     </div>

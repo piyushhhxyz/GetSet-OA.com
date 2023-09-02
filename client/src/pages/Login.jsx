@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
+import { Player } from "@lottiefiles/react-lottie-player";
 
 export default function Login() {
   const google = () => {
@@ -21,8 +22,15 @@ export default function Login() {
       </div>
 
       <div className="loginWrapper">
-        <div className="container">
-          <img src="loginbg-removebg-preview.png" className="loginImg"></img>
+        <div className="Lcontainer">
+          {/* <img src="loginbg-removebg-preview.png" className="loginImg"></img> */}
+          <Player
+            src="https://lottie.host/906bfef7-764f-4ed7-9840-c655f80378c5/c2FHrRtdxT.json"
+            className="player"
+            loop
+            autoplay
+            style={{ height: "550px", width: "550px" }}
+          />
           <div className="btnDiv">
             <button className="googleBtn" onClick={google}>
               <img
