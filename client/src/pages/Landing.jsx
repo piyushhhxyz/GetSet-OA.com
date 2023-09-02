@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 function Landing() {
   let navigator = useNavigate();
@@ -9,7 +9,7 @@ function Landing() {
       "Microsoft Questions",
       "Atlassian Questions",
       "Sprinklr Questions",
-      "All OA Questions...", 
+      "All OA Questions...",
     ],
     loop: {},
     typeSpeed: 10,
@@ -27,10 +27,11 @@ function Landing() {
           <h1 className="name">GetSet</h1>
           <h1 className="nameGr">OA</h1>
         </div>
-          
+
         <div className="typeWriter">
-          <h2 >
-            <span className="getText">Get</span> <span className="typeWriterH2">{text}</span>
+          <h2>
+            <span className="getText">Get</span>{" "}
+            <span className="typeWriterH2">{text}</span>
             <span className="typeWriterCursor">
               <Cursor />
             </span>
@@ -65,6 +66,7 @@ function Landing() {
         </button>
         <img src="bg-removed.jpeg" className="landingImg"></img>
       </div>
+      <Outlet></Outlet>
     </div>
   );
 }

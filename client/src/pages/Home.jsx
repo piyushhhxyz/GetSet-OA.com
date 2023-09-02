@@ -1,67 +1,58 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import axios from 'axios';
-
-
+import axios from "axios";
+import Navbar from "../components/Navbar";
+import Loader from "../components/Loader";
 
 export default function Home({ user }) {
+  const [isLoading, setLoading] = React.useState(false);
   const [uniqueCompanies, setUniqueCompanies] = React.useState([]);
-  
+
+  let cards = uniqueCompanies.map((company, index) => {
+    return (
+      <Link key={index} to={`/Home/${company._id}`}>
+        <div className="companyBox">
+          <img
+            src={company.companyLogo}
+            alt={`${company._id} Logo`}
+            className="companyLogo"
+          />
+          <div className="companyName">{company._id.toUpperCase()}</div>
+        </div>
+      </Link>
+    );
+  });
+
   React.useEffect(() => {
     getUniqueCompanies();
   }, []);
 
   const getUniqueCompanies = async () => {
+    setTimeout(() => {
+      setLoading(true);
+    }, 800);
     try {
-      const response = await axios.get('http://localhost:4000/api/v1/getData/unique-companies');
+      const response = await axios.get(
+        "http://localhost:4000/api/v1/getData/unique-companies"
+      );
       setUniqueCompanies(response.data);
     } catch (error) {
-      console.error('Error fetching unique companies:', error);
+      console.error("Error fetching unique companies:", error);
     }
   };
 
   return (
     <div className="homeWrapper">
-      <div className="inline">
-        <img
-          className="appLogoHome"
-          src="wepik-gradient-developers-pink-coding-logo-20230823145648gBI8.png"
-          alt="App Logo"
-        />
-        <h1 className="name">GetSet</h1>
-        <h1 className="nameGr">OA</h1>
-        {user ? (
-          <ul className="list">
-            <li className="listItem">
-              <img
-                src={user.photos[0].value}
-                alt=""
-                className="avatar"
-              />
-            </li>
-            <li className="listItem">{user.displayName}</li>
-          </ul>
-        ) : (
-          <Link className="listItem" to="/auth">
-            Login
-          </Link>
-        )}
-      </div>
-
-      <div className="companiesContainer">
-                {uniqueCompanies.map((company, index) => (
-                    <Link key={index} to={`/Home/${company._id}`}>
-                        <div className="companyBox">
-                            <img
-                                src={company.companyLogo}
-                                alt={`${company._id} Logo`}
-                                className="companyLogo"
-                            />
-                            <div className="companyName">{company._id.toUpperCase()}</div>
-                        </div>
-                    </Link>
-                ))}
-            </div>
+      {isLoading ? (
+        <div>
+          <Navbar user={user}></Navbar>
+          <div className="companiesContainer">{cards}</div>
+        </div>
+      ) : (
+        <div>
+          <Loader />
+        </div>
+      )}
     </div>
   );
 }
