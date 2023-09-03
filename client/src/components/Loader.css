@@ -9,7 +9,7 @@ body {
 }
 .loaderMessage {
   position: absolute;
-  font-weight: 600;
+  font-weight: 800;
   font-size: x-large;
   text-transform: uppercase;
   left: 50%;

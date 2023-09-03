@@ -1,6 +1,7 @@
 import { Outlet, useNavigate } from "react-router-dom";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { Player } from "@lottiefiles/react-lottie-player";
+import animationData from '../lotties/3R2RxWOWux.json';
 
 function Landing() {
   let navigator = useNavigate();
@@ -68,11 +69,11 @@ function Landing() {
         </button>
         {/* <img src="bg-removed.jpeg" className="landingImg"></img> */}
         <Player
-          src="https://lottie.host/cf34bdd3-6a15-42c1-92cb-84e9e15f06c9/dlSKAoiHbM.json"
+          src={animationData}
           className="player"
           loop
           autoplay
-          style={{ height: "600px", width: "600px" }}
+          style={{ height: "700px", width: "700px" }}
         />
       </div>
       <Outlet></Outlet>

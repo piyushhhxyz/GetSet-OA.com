@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import Navbar from "../components/Navbar";
+import Loader from "../components/Loader";
 
 export default function CompanyDetails({ user }) {
   const { companyName } = useParams();
@@ -37,8 +38,16 @@ export default function CompanyDetails({ user }) {
   };
 
   return (
-    <div className="company-details-container">
+    <div>
       <Navbar user={user}></Navbar>
+      {!companyDetails.length ? (
+      <div>
+        {/* <Navbar user={user}></Navbar> */}
+        <Loader />
+    </div>
+    ) : (
+      <div className="company-details-container">
+      {/* <Navbar user={user}></Navbar> */}
       <h1 className="company-name-heading">Company: {companyName}</h1>
 
       <div className="details-boxes">
@@ -59,6 +68,9 @@ export default function CompanyDetails({ user }) {
           </div>
         ))}
       </div>
+    </div>
+    )
+    }
     </div>
   );
 }

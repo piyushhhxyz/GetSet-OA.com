@@ -288,8 +288,7 @@ code {
 }
 
 .listItem {
-  margin-right: 20px;
-  margin-top: -5px;
+  /* margin-top: -5px; */
   margin-right: 10px;
   font-weight: 500;
   cursor: pointer;
@@ -304,6 +303,9 @@ code {
   border-color: white;
   object-fit: cover;
 }
+
+
+/* NEXT */
 .typeWriter {
   margin-top: -450px;
   margin-bottom: -50px;
@@ -332,7 +334,7 @@ code {
 /* FORM CSS */
 
 .upload-form {
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
@@ -404,7 +406,8 @@ code {
   height: 100vh;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
 }
 .upload-form {
   flex: 1;
@@ -539,3 +542,48 @@ code {
 .details-box.active {
   background-color: rgba(255, 255, 255, 0.3);
 }
+
+
+/* Upload.css */
+
+/* .login-form-container {
+  margin: auto;
+  width: 50%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+} */
+
+/* .input-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+} */
+
+.upload_auth-form {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+.upload_auth-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+

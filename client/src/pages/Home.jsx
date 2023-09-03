@@ -43,7 +43,7 @@ export default function Home({ user }) {
 
   return (
     <div className="homeWrapper">
-      {isLoading ? (
+      {!uniqueCompanies.length ? (
         <div>
           <Navbar user={user}></Navbar>
           <Loader />
