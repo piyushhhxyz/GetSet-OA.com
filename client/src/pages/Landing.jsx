@@ -2,6 +2,7 @@ import { Outlet, useNavigate } from "react-router-dom";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { Player } from "@lottiefiles/react-lottie-player";
 import animationData from '../lotties/3R2RxWOWux.json';
+import Footer from "../components/Footer";
 
 function Landing() {
   let navigator = useNavigate();
@@ -62,7 +63,6 @@ function Landing() {
           Start Solving
         </button>
       </div>
-
       <div className="purpleDiv">
         <button className="registerBtn" onClick={() => navigator("/auth")}>
           REGISTER

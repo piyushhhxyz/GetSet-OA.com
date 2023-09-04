@@ -23,6 +23,17 @@ code {
   padding: 0%;
   margin: 0%;
 }
+.footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+
 .blackDiv {
   margin-top: -50px;
   padding: 0%;
@@ -141,7 +152,6 @@ code {
   margin-left: 14vw;
   border-radius: 15px;
   margin-top: 50px;
-
   border: none;
   font-weight: 600;
   font-size: larger;

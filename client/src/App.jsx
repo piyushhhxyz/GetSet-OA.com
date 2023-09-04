@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Upload from "./pages/Upload";
 import CompanyPage from "./pages/CompanyPage";
+import Footer from "./components/Footer";
 // import Loader from "./components/Loader";
 
 export default function App() {
@@ -49,6 +50,7 @@ export default function App() {
           />
         )}
       </Routes>
+    <Footer />
     </BrowserRouter>
   );
 }
