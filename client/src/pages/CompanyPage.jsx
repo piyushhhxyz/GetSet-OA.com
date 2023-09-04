@@ -48,7 +48,7 @@ export default function CompanyDetails({ user }) {
     ) : (
       <div className="company-details-container">
       {/* <Navbar user={user}></Navbar> */}
-      <h1 className="company-name-heading">Company: {companyName}</h1>
+      <h1 className="company-name-heading">{companyName.toUpperCase()}</h1>
 
       <div className="details-boxes">
         {companyDetails.map((details, index) => (
