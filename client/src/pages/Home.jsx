@@ -43,14 +43,13 @@ export default function Home({ user }) {
 
   return (
     <div className="homeWrapper">
+      <Navbar user={user}></Navbar>
       {!uniqueCompanies.length ? (
         <div>
-          <Navbar user={user}></Navbar>
           <Loader />
         </div>
       ) : (
         <div>
-          <Navbar user={user}></Navbar>
           <div className="companiesContainer">{cards}</div>
         </div>
       )}

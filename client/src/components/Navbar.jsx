@@ -8,13 +8,15 @@ export default function Navbar({ user }) {
 
   return (
     <div className="inline">
+      <Link to={"/"} className="inline">
       <img
-        className="appLogoHome"
-        src="https://get-set-oa.vercel.app/wepik-gradient-developers-pink-coding-logo-20230823145648gBI8.png"
-        alt="App Logo"
-      />
-      <h1 className="name">GetSet</h1>
-      <h1 className="nameGr">OA.com</h1>
+          className="appLogoHome"
+          src="https://get-set-oa.vercel.app/wepik-gradient-developers-pink-coding-logo-20230823145648gBI8.png"
+          alt="App Logo"
+        />
+        <h1 className="name">GetSet</h1>
+        <h1 className="nameGr">OA.com</h1>
+      </Link>
       {user ? (
         <div className="user-info">
           <ul className="list">

@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import { Player } from "@lottiefiles/react-lottie-player";
+import animationData from '../lotties/login.json';
 
 export default function Login() {
   const google = () => {
@@ -23,12 +24,12 @@ export default function Login() {
 
       <div className="loginWrapper">
         <div className="Lcontainer">
-          {/* <img src="loginbg-removebg-preview.png" className="loginImg"></img> */}
           <Player
-            src="https://lottie.host/906bfef7-764f-4ed7-9840-c655f80378c5/c2FHrRtdxT.json"
+            src={animationData}
             className="player"
             loop
             autoplay
+            speed={"2"}
             style={{ height: "550px", width: "550px" }}
           />
           <div className="btnDiv">

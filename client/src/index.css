@@ -23,6 +23,9 @@ code {
   padding: 0%;
   margin: 0%;
 }
+a {
+  text-decoration: none;
+}
 .blackDiv {
   margin-top: -50px;
   padding: 0%;
@@ -43,7 +46,7 @@ code {
     rgba(199, 0, 175, 1) 25%,
     rgba(82, 4, 124, 1) 66%
   );
-  height: 95vh;
+  height: 97vh;
   width: 45vw;
   margin-left: 30px;
   display: flex;
@@ -61,15 +64,14 @@ code {
 }
 .registerBtn {
   padding: 25px 1px;
-  position: relative;
   height: 10px;
   width: 200px;
-  border-radius: 12px;
+  border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-left: 400px;
-  margin-top: -40px;
+  margin-top: -25px;
   color: white;
   background-color: black;
   font-weight: 700;
@@ -104,7 +106,7 @@ code {
   display: flex;
   flex-direction: row;
   color: white;
-  margin-top: -50px;
+  margin-top: -150px;
 }
 .inline {
   display: flex;
@@ -307,7 +309,7 @@ code {
 
 /* NEXT */
 .typeWriter {
-  margin-top: -450px;
+  margin-top: -550px;
   margin-bottom: -50px;
   margin-left: 100px;
   width: 1000px;
@@ -454,8 +456,8 @@ code {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
-  padding: 50px;
+  gap: 10px;
+  padding: 15px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -468,16 +470,7 @@ code {
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
   text-align: center;
-  border-radius: 10px;
-} */
-.companiesContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 50px;
-  max-width: 1200px;
-  margin: 0 auto;
+  border-radius: 40px;
 }
 
 .companyBox {
@@ -496,17 +489,20 @@ code {
   max-width: 100%;
   height: auto;
   margin-bottom: 10px;
+  border-radius: 30px;
+
 }
 
 .companyName {
   font-size: 20px;
   font-weight: 700;
-  color: #fff;
+  color:aliceblue;
 }
 
 .companyBox:hover {
   background-color: rgba(255, 255, 255, 0.2);
-  transform: translateY(-15px);
+  transform: translateY(-10px);
+  scale: 1.03;
 }
 
 
@@ -539,7 +535,7 @@ code {
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 20px;
   margin: 10px;
-  width: calc(33.33% - 20px);
+  width: calc(30.33% - 20px);
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -550,7 +546,6 @@ code {
 }
 
 .college-name {
-  font-size: 18px;
   margin-bottom: 10px;
   color: #eee;
 }
@@ -566,23 +561,6 @@ code {
 
 
 /* Upload.css */
-
-/* .login-form-container {
-  margin: auto;
-  width: 50%;
-  padding: 20px;
-  border: 1px solid #ccc;
-  background-color: #f9f9f9;
-} */
-
-/* .input-field {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-} */
-
 .upload_auth-form {
   text-align: center;
   max-width: 750px;
@@ -606,5 +584,17 @@ code {
   cursor: pointer;
 }
 
+.logout-button {
+  background-color: #f44336; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease; 
+}
 
-
+.logout-button:hover {
+  background-color: #d32f2f; 
+}

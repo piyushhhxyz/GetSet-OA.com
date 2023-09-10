@@ -67,12 +67,12 @@ function Landing() {
         <button className="registerBtn" onClick={() => navigator("/auth")}>
           REGISTER
         </button>
-        {/* <img src="bg-removed.jpeg" className="landingImg"></img> */}
         <Player
           src={animationData}
           className="player"
           loop
           autoplay
+          speed={"2"}
           style={{ height: "700px", width: "700px" }}
         />
       </div>
