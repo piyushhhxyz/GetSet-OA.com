@@ -1,15 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 export default function Navbar({ user }) {
   const logout = () => {
     window.open("http://localhost:4000/auth/logout", "_self");
   };
+  let navigator = useNavigate();
 
   return (
     <div className="inline">
       <Link to={"/"} className="inline">
-      <img
+        <img
           className="appLogoHome"
           src="https://get-set-oa.vercel.app/wepik-gradient-developers-pink-coding-logo-20230823145648gBI8.png"
           alt="App Logo"
@@ -20,6 +21,20 @@ export default function Navbar({ user }) {
       {user ? (
         <div className="user-info">
           <ul className="list">
+            <div className="navlinkDiv">
+              <NavLink to={"/home"} className="navBtn">
+                OA Question Pool
+              </NavLink>
+              <NavLink to={"/offcampus"} className="navBtn">
+                Off-Campus Alerts
+              </NavLink>
+              <NavLink to={"/resources"} className="navBtn">
+                Exclusive Resources
+              </NavLink>
+              <NavLink to={"/interview"} className="navBtn lasst">
+                Interview Insights
+              </NavLink>
+            </div>
             <li className="listItem">
               <img src={user.photos[0].value} alt="" className="avatar" />
             </li>

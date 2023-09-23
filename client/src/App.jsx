@@ -5,6 +5,9 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Upload from "./pages/Upload";
 import CompanyPage from "./pages/CompanyPage";
+import Offcampus from "./pages/Offcampus";
+import Interview from "./pages/interview";
+import Sources from "./pages/sources";
 
 export default function App() {
   const [user, setUser] = React.useState(null);
@@ -12,7 +15,7 @@ export default function App() {
 
   React.useEffect(() => {
     const getUser = () => {
-      setLoading(true)
+      setLoading(true);
       fetch("http://localhost:4000/auth/login/success", {
         method: "GET",
         credentials: "include",
@@ -28,7 +31,7 @@ export default function App() {
         })
         .then((resObject) => {
           setUser(resObject.user);
-          setLoading(false); 
+          setLoading(false);
         })
         .catch((err) => {
           console.log(err);
@@ -45,18 +48,24 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/auth" element={user ? <Navigate to="/home" /> : <Login />} />
+        <Route
+          path="/auth"
+          element={user ? <Navigate to="/home" /> : <Login />}
+        />
         {user ? (
           <>
             <Route path="/home" element={<Home user={user} />} />
             <Route path="/upload" element={<Upload user={user} />} />
-            <Route path="/home/:companyName" element={<CompanyPage user={user} />} />
+            <Route
+              path="/home/:companyName"
+              element={<CompanyPage user={user} />}
+            />
+            <Route path="/offcampus" element={<Offcampus user={user} />} />
+            <Route path="/interview" element={<Interview user={user} />} />
+            <Route path="/resources" element={<Sources user={user} />} />
           </>
         ) : (
-          <Route
-            path="/home"
-            element={<Navigate to="/auth" />}
-          />
+          <Route path="/home" element={<Navigate to="/auth" />} />
         )}
       </Routes>
     </BrowserRouter>
