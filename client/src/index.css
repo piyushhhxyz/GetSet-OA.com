@@ -252,6 +252,7 @@ a {
     rgba(0, 0, 0, 1) 0%,
     rgba(152, 3, 249, 1) 81%
   );
+  background-color: black;
   height: 100vh;
   overflow: scroll;
 }
@@ -305,7 +306,6 @@ a {
   border-color: white;
   object-fit: cover;
 }
-
 
 /* NEXT */
 .typeWriter {
@@ -475,7 +475,7 @@ a {
 
 .companyBox {
   flex: 0 0 calc(33.33% - 20px); /* Set card width to 1/3 of the container minus gap */
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 20px;
   cursor: pointer;
@@ -484,19 +484,17 @@ a {
   border-radius: 10px;
 }
 
-
 .companyLogo {
   max-width: 100%;
   height: auto;
   margin-bottom: 10px;
   border-radius: 30px;
-
 }
 
 .companyName {
   font-size: 20px;
   font-weight: 700;
-  color:aliceblue;
+  color: aliceblue;
 }
 
 .companyBox:hover {
@@ -504,8 +502,6 @@ a {
   transform: translateY(-10px);
   scale: 1.03;
 }
-
-
 
 /* CompanyDetails.css */
 
@@ -559,7 +555,6 @@ a {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-
 /* Upload.css */
 .upload_auth-form {
   text-align: center;
@@ -585,16 +580,114 @@ a {
 }
 
 .logout-button {
-  background-color: #f44336; 
+  background-color: #f44336;
   color: white;
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
   font-size: 16px;
-  transition: background-color 0.3s ease; 
+  transition: background-color 0.3s ease;
 }
 
 .logout-button:hover {
-  background-color: #d32f2f; 
+  background-color: #d32f2f;
+}
+.navlinkDiv {
+  width: 480px;
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  align-items: center;
+  margin-left: -740px;
+  margin-right: 100px;
+  border-radius: 12px;
+  background-color: rgba(255, 144, 240, 0.171);
+}
+.navBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+  margin-right: 15px;
+  border-radius: 15px;
+  height: 50px;
+  width: 100px;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+}
+.active {
+  background-color: rgba(255, 255, 255, 0.582);
+  color: black;
+}
+.lasst {
+  margin-right: 5px;
+}
+.hold,
+.comingSoon {
+  margin: 0 0;
+  color: white;
+  font-size: 2.5em;
+  width: 50%;
+  display: flex;
+  margin-left: 400px;
+  margin-top: 50px;
+}
+.comingSoon {
+  margin: 0 0;
+  font-size: 1.25em;
+  color: white;
+  margin-left: 900px;
+  margin-top: -70px;
+}
+.waitgr {
+  background: #faf5f5;
+  background: linear-gradient(to right, #faf5f5 13%, #888a89 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.offcampusWrapper {
+  display: flex;
+  height: 90vh;
+  flex-wrap: wrap;
+  overflow: scroll;
+  padding-left: 180px;
+}
+.offcampusCardWrapper {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  height: 315px;
+  width: 350px;
+  margin: 15px;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 15px;
+}
+.offcampusCardWrapper:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-10px);
+  scale: 1.03;
+  transition: 0.3s;
+}
+.cardImg {
+  height: 250px;
+  width: 350px;
+  border-radius: 50px;
+}
+.offcampusDataDiv {
+  color: rgba(255, 255, 255, 0.872);
+  text-align: center;
+}
+.offcampusName {
+  margin-top: 5px;
+  margin-bottom: -20px;
+  font-weight: 500;
+}
+.roleName {
+  margin-top: -20px;
+  font-weight: 500;
+}
+.role {
+  font-weight: 500;
 }

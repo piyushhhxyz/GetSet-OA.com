@@ -1,12 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import Navbar from "../components/Navbar";
 import Loader from "../components/Loader";
+import Navbar from "../components/Navbar";
 
 export default function Home({ user }) {
-  const [isLoading, setLoading] = React.useState(true);
   const [uniqueCompanies, setUniqueCompanies] = React.useState([]);
+
+  React.useEffect(() => {
+    getUniqueCompanies();
+  }, []);
+
+  const getUniqueCompanies = async () => {
+    try {
+      const response = await axios.get(
+        "http://localhost:4000/api/v1/getData/unique-companies"
+      );
+      setUniqueCompanies(response.data);
+    } catch (error) {
+      console.error("Error fetching unique companies:", error);
+    }
+  };
+
+  const logout = () => {
+    window.open("http://localhost:4000/auth/logout", "_self");
+  };
 
   let cards = uniqueCompanies.map((company, index) => {
     return (
@@ -23,36 +41,20 @@ export default function Home({ user }) {
     );
   });
 
-  React.useEffect(() => {
-    getUniqueCompanies();
-  }, []);
-
-  const getUniqueCompanies = async () => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 800);
-    try {
-      const response = await axios.get(
-        "http://localhost:4000/api/v1/getData/unique-companies"
-      );
-      setUniqueCompanies(response.data);
-    } catch (error) {
-      console.error("Error fetching unique companies:", error);
-    }
-  };
-
   return (
-    <div className="homeWrapper">
-      <Navbar user={user}></Navbar>
-      {!uniqueCompanies.length ? (
-        <div>
-          <Loader />
-        </div>
-      ) : (
-        <div>
-          <div className="companiesContainer">{cards}</div>
-        </div>
-      )}
+    <div>
+      <Navbar user={user} />
+      <div className="homeWrapper">
+        {!uniqueCompanies.length ? (
+          <div>
+            <Loader />
+          </div>
+        ) : (
+          <div>
+            <div className="companiesContainer">{cards}</div>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
