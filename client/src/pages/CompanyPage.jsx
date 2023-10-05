@@ -41,34 +41,33 @@ export default function CompanyDetails({ user }) {
     <div>
       <Navbar user={user}></Navbar>
       {!companyDetails.length ? (
-      <div>
-        <Loader />
-    </div>
-    ) : (
-      <div className="company-details-container">
-      <h1 className="company-name-heading">{companyName.toUpperCase()}</h1>
+        <div>
+          <Loader />
+        </div>
+      ) : (
+        <div className="company-details-container">
+          <h1 className="company-name-heading">{companyName.toUpperCase()}</h1>
 
-      <div className="details-boxes">
-        {companyDetails.map((details, index) => (
-          <div
-            key={index}
-            className={`details-box ${activeBox === index ? "active" : ""}`}
-            onClick={() => {
-              toggleDriveLink(index);
-              openDriveLink(details.driveLink);
-            }}
-          >
-            <h2 className="college-name">{details.collegeName}</h2>
-            <p className="info">Date: {details.date}</p>
-            <p className="info">
-              Duration: {details.intern_or_FullTime.toUpperCase()}
-            </p>
+          <div className="details-boxes">
+            {companyDetails.map((details, index) => (
+              <div
+                key={index}
+                className={`details-box ${activeBox === index ? "active" : ""}`}
+                onClick={() => {
+                  toggleDriveLink(index);
+                  openDriveLink(details.driveLink);
+                }}
+              >
+                <h2 className="college-name">{details.collegeName}</h2>
+                <p className="info">Date: {details.date}</p>
+                <p className="info">
+                  Duration: {details.intern_or_FullTime.toUpperCase()}
+                </p>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-    </div>
-    )
-    }
+        </div>
+      )}
     </div>
   );
 }

@@ -339,10 +339,9 @@ a {
   max-width: 500px;
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  background-color: rgba(0, 0, 0, 0.58);
 }
+
 /* 
 .upload-form fieldset {
   border: none;
@@ -361,11 +360,18 @@ a {
   font-weight: bold;
 }
 
-.upload-form .form-input {
+.upload-form {
   width: 100%;
   padding: 8px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.form-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  /* border: 1px solid #ccc;*/
   border-radius: 5px;
 }
 
@@ -382,15 +388,18 @@ a {
   display: block;
   width: 100%;
   padding: 10px;
-  background-color: #007bff;
+  background-color: #fa02c8;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
+.btn {
+  margin-top: 10px;
+}
 
 .upload-form .btn:hover {
-  background-color: #0056b3;
+  background-color: #fa02c8b1;
 }
 
 .upload-form img {
@@ -406,10 +415,14 @@ a {
   display: flex;
   background-color: black;
   height: 100vh;
+  width: 100vw;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   justify-content: center;
+  background-image: url("https://img.freepik.com/premium-vector/futuristic-background-retro-style-digital-grid-landscape-80s-vector-background-party_658411-424.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .upload-form {
   flex: 1;
@@ -561,9 +574,9 @@ a {
   max-width: 750px;
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #f9f9f9;
+  margin-top: -200px;
+  margin-left: 650px;
 }
 .upload_auth-form label {
   display: block;
@@ -571,12 +584,12 @@ a {
   font-weight: bold;
 }
 .btn {
-  background-color: #007bff;
   color: #fff;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-top: 15px;
 }
 
 .logout-button {
@@ -690,4 +703,197 @@ a {
 }
 .role {
   font-weight: 500;
+}
+.uploadOptions {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("https://img.freepik.com/premium-vector/futuristic-background-retro-style-digital-grid-landscape-80s-vector-background-party_658411-424.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.optionsWrapper {
+  height: 600px;
+  width: 1100px;
+  display: flex;
+  margin-left: -235px;
+}
+.OAupload {
+  height: 510px;
+  width: 500px;
+  margin-top: 50px;
+  margin-left: 150px;
+  border-radius: 15px;
+}
+.offCampus-Resources-container {
+  display: flex;
+  flex-direction: row;
+}
+.offUpload {
+  height: 250px;
+  width: 250px;
+  margin-top: 50px;
+  margin-left: 10px;
+  border-radius: 15px;
+}
+.resUpload {
+  height: 250px;
+  width: 250px;
+  margin-left: 10px;
+  margin-top: 50px;
+  border-radius: 15px;
+}
+.uploadGif {
+  height: inherit;
+  width: inherit;
+  border-radius: 15px;
+}
+.cardTitle {
+  margin-top: -50px;
+  margin-left: 135px;
+  color: white;
+}
+.cardTitleoff {
+  margin-top: -30px;
+  color: white;
+  margin-left: 35px;
+}
+.cardTitleres {
+  margin-top: -30px;
+  color: white;
+  margin-left: 45px;
+}
+.OAupload:hover,
+.resUpload:hover,
+.offUpload:hover,
+.signUpload:hover {
+  cursor: pointer;
+}
+.signUpload {
+  background-image: radial-gradient(
+      circle at 100% 100%,
+      transparent 8px,
+      #17c3ee 8px,
+      #17c3ee 18px,
+      transparent 18px
+    ),
+    linear-gradient(to right, #17c3ee, #304ffe),
+    radial-gradient(
+      circle at 0% 100%,
+      transparent 8px,
+      #304ffe 8px,
+      #304ffe 18px,
+      transparent 18px
+    ),
+    linear-gradient(to bottom, #304ffe, #8a00bd),
+    radial-gradient(
+      circle at 0% 0%,
+      transparent 8px,
+      #8a00bd 8px,
+      #8a00bd 18px,
+      transparent 18px
+    ),
+    linear-gradient(to left, #8a00bd, #00aaff),
+    radial-gradient(
+      circle at 100% 0%,
+      transparent 8px,
+      #00aaff 8px,
+      #00aaff 18px,
+      transparent 18px
+    ),
+    linear-gradient(to top, #00aaff, #17c3ee);
+  background-size: 18px 18px, calc(100% - 36px) 10px, 18px 18px,
+    10px calc(100% - 36px);
+  background-position: top left, top center, top right, center right,
+    bottom right, bottom center, bottom left, center left;
+  background-repeat: no-repeat;
+  height: 249px;
+  width: 512px;
+  margin-left: 10px;
+  margin-top: 10px;
+  background-color: rgba(0, 0, 0, 0.493);
+  border-radius: 20px;
+}
+.signup {
+  color: white;
+  font-size: 55px;
+  margin-top: 5px;
+  margin-left: 15px;
+  font-weight: 800;
+  padding: 25px;
+  /** TEXT GRADIENT */
+
+  color: #3caae6;
+  background-image: -webkit-linear-gradient(
+    135deg,
+    #3caae6 16%,
+    #8f05ff 51%,
+    #f5f5ff 100%
+  );
+  background: #ae11bf;
+  background: linear-gradient(to right, #ae11bf 29%, #690cc7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.user {
+  display: flex;
+  background-color: rgba(128, 128, 128, 0.671);
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 200px;
+  margin-left: -75px;
+}
+.password {
+  display: flex;
+  background-color: rgba(128, 128, 128, 0.671);
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 200px;
+  margin-left: 5px;
+}
+.usernameInput {
+  margin-left: 5px;
+}
+.passInput {
+  margin-left: 3px;
+}
+input[type="text"] {
+  background: transparent;
+  border: none;
+}
+.formHead {
+  color: white;
+}
+.auth {
+  background-color: #ff00bf;
+  margin-left: -330px;
+}
+.authMessage {
+  color: #ff00bf;
+  margin-top: -400px;
+  position: fixed;
+  margin-left: -145px;
+}
+.authM {
+  color: white;
+  position: fixed;
+  margin-top: -340px;
+  margin-left: -95px;
+}
+.authFlex {
+  display: flex;
+}
+.passInput::placeholder {
+  color: white;
+}
+.usernameInput::placeholder {
+  color: white;
 }
