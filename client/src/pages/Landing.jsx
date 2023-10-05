@@ -1,7 +1,7 @@
 import { Outlet, useNavigate } from "react-router-dom";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { Player } from "@lottiefiles/react-lottie-player";
-import animationData from '../lotties/3R2RxWOWux.json';
+import animationData from "../lotties/3R2RxWOWux.json";
 
 function Landing() {
   let navigator = useNavigate();

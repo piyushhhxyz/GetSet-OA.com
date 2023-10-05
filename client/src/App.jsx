@@ -8,6 +8,9 @@ import CompanyPage from "./pages/CompanyPage";
 import Offcampus from "./pages/Offcampus";
 import Interview from "./pages/interview";
 import Sources from "./pages/sources";
+import Oaupload from "./pages/upload/Oaupload";
+import OffcampusUpload from "./pages/upload/OffcampusUpload";
+import ResourceUpload from "./pages/upload/ResourceUpload";
 
 export default function App() {
   const [user, setUser] = React.useState(null);
@@ -56,6 +59,10 @@ export default function App() {
           <>
             <Route path="/home" element={<Home user={user} />} />
             <Route path="/upload" element={<Upload user={user} />} />
+            <Route path="/upload/OA" element={<Oaupload />} />
+            <Route path="/upload/offcampus" element={<OffcampusUpload />} />
+            <Route path="/upload/resources" element={<ResourceUpload />} />
+
             <Route
               path="/home/:companyName"
               element={<CompanyPage user={user} />}
