@@ -14,11 +14,9 @@ import ResourceUpload from "./pages/upload/ResourceUpload";
 
 export default function App() {
   const [user, setUser] = React.useState(null);
-  const [isLoading, setLoading] = React.useState(true);
 
   React.useEffect(() => {
     const getUser = () => {
-      setLoading(true);
       fetch("http://localhost:4000/auth/login/success", {
         method: "GET",
         credentials: "include",
@@ -34,19 +32,14 @@ export default function App() {
         })
         .then((resObject) => {
           setUser(resObject.user);
-          setLoading(false);
         })
         .catch((err) => {
           console.log(err);
-          setLoading(false);
         });
     };
     getUser();
   }, []);
-
-  // if (isLoading) {
-  //   return <h1>nfnf</h1>;
-  // }
+  
   return (
     <BrowserRouter>
       <Routes>

@@ -13,6 +13,7 @@
     "react-cookies": "^0.1.1",
     "react-dom": "^18.2.0",
     "react-github-login-button": "^1.0.1",
+    "react-hotkeys": "^2.0.0",
     "react-icons": "^4.10.1",
     "react-modal": "^3.16.1",
     "react-router-dom": "^6.15.0",
